@@ -670,23 +670,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Admin\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\DINH_DUC\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\TTCNPM\\FoodCourt\\Client\\FoodCourt.App\\FoodCourt.App\\FoodCourt.App.csproj",
+      "projectUniqueName": "D:\\Xamarin App\\TTCNPM-FoodCourt\\Client\\FoodCourt.App\\FoodCourt.App\\FoodCourt.App.csproj",
       "projectName": "FoodCourt.App",
-      "projectPath": "F:\\TTCNPM\\FoodCourt\\Client\\FoodCourt.App\\FoodCourt.App\\FoodCourt.App.csproj",
-      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "F:\\TTCNPM\\FoodCourt\\Client\\FoodCourt.App\\FoodCourt.App\\obj\\",
+      "projectPath": "D:\\Xamarin App\\TTCNPM-FoodCourt\\Client\\FoodCourt.App\\FoodCourt.App\\FoodCourt.App.csproj",
+      "packagesPath": "C:\\Users\\DINH_DUC\\.nuget\\packages\\",
+      "outputPath": "D:\\Xamarin App\\TTCNPM-FoodCourt\\Client\\FoodCourt.App\\FoodCourt.App\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\"
+        "C:\\Microsoft\\Xamarin\\NuGet\\",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\DINH_DUC\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
