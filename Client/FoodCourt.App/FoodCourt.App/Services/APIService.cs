@@ -75,7 +75,7 @@ namespace FoodCourt.App.Services
             
             var httpClient = new HttpClient();
             httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", Preferences.Get("accessToken", string.Empty));
-            var response = await httpClient.GetStringAsync(AppSettings.ApiUrl + "api/Products/" + productId);
+            var response = await httpClient.GetStringAsync(AppSettings.APIUrl + "api/Products/" + productId);
             return JsonConvert.DeserializeObject<Product>(response);
         }
 
@@ -84,7 +84,7 @@ namespace FoodCourt.App.Services
             
             var httpClient = new HttpClient();
             httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", Preferences.Get("accessToken", string.Empty));
-            var response = await httpClient.GetStringAsync(AppSettings.ApiUrl + "api/Products/ProductsByCategory/" + categoryId);
+            var response = await httpClient.GetStringAsync(AppSettings.APIUrl + "api/Products/ProductsByCategory/" + categoryId);
             return JsonConvert.DeserializeObject<List<ProductByCategory>>(response);
         }
 
@@ -93,7 +93,7 @@ namespace FoodCourt.App.Services
            
             var httpClient = new HttpClient();
             httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", Preferences.Get("accessToken", string.Empty));
-            var response = await httpClient.GetStringAsync(AppSettings.ApiUrl + "api/Products/PopularProducts");
+            var response = await httpClient.GetStringAsync(AppSettings.APIUrl + "api/Products/PopularProducts");
             return JsonConvert.DeserializeObject<List<PopularProduct>>(response);
         }
         #endregion
@@ -106,7 +106,7 @@ namespace FoodCourt.App.Services
             var json = JsonConvert.SerializeObject(addToCart);
             var content = new StringContent(json, Encoding.UTF8, "application/json");
             httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", Preferences.Get("accessToken", string.Empty));
-            var response = await httpClient.PostAsync(AppSettings.ApiUrl + "api/ShoppingCartItems", content);
+            var response = await httpClient.PostAsync(AppSettings.APIUrl + "api/ShoppingCartItems", content);
             if (!response.IsSuccessStatusCode) return false;
             return true;
         }
@@ -116,7 +116,7 @@ namespace FoodCourt.App.Services
            
             var httpClient = new HttpClient();
             httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", Preferences.Get("accessToken", string.Empty));
-            var response = await httpClient.GetStringAsync(AppSettings.ApiUrl + "api/ShoppingCartItems/SubTotal/" + userId);
+            var response = await httpClient.GetStringAsync(AppSettings.APIUrl + "api/ShoppingCartItems/SubTotal/" + userId);
             return JsonConvert.DeserializeObject<CartSubTotal>(response);
         }
 
@@ -125,7 +125,7 @@ namespace FoodCourt.App.Services
             
             var httpClient = new HttpClient();
             httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", Preferences.Get("accessToken", string.Empty));
-            var response = await httpClient.GetStringAsync(AppSettings.ApiUrl + "api/ShoppingCartItems/" + userId);
+            var response = await httpClient.GetStringAsync(AppSettings.APIUrl + "api/ShoppingCartItems/" + userId);
             return JsonConvert.DeserializeObject<List<ShoppingCartItem>>(response);
         }
 
@@ -134,7 +134,7 @@ namespace FoodCourt.App.Services
             
             var httpClient = new HttpClient();
             httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", Preferences.Get("accessToken", string.Empty));
-            var response = await httpClient.GetStringAsync(AppSettings.ApiUrl + "api/ShoppingCartItems/TotalItems/" + userId);
+            var response = await httpClient.GetStringAsync(AppSettings.APIUrl + "api/ShoppingCartItems/TotalItems/" + userId);
             return JsonConvert.DeserializeObject<TotalCartItem>(response);
         }
 
@@ -143,10 +143,42 @@ namespace FoodCourt.App.Services
             
             var httpClient = new HttpClient();
             httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", Preferences.Get("accessToken", string.Empty));
-            var response = await httpClient.DeleteAsync(AppSettings.ApiUrl + "api/ShoppingCartItems/" + userId);
+            var response = await httpClient.DeleteAsync(AppSettings.APIUrl + "api/ShoppingCartItems/" + userId);
             if (!response.IsSuccessStatusCode) return false;
             return true;
         }
-#endregion
+        #endregion
+
+        #region Order
+        public static async Task<OrderResponse> PlaceOrder(Order order)
+        {
+            
+            var httpClient = new HttpClient();
+            var json = JsonConvert.SerializeObject(order);
+            var content = new StringContent(json, Encoding.UTF8, "application/json");
+            httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", Preferences.Get("accessToken", string.Empty));
+            var response = await httpClient.PostAsync(AppSettings.APIUrl + "api/Orders", content);
+            var jsonResult = await response.Content.ReadAsStringAsync();
+            return JsonConvert.DeserializeObject<OrderResponse>(jsonResult);
+        }
+
+        public static async Task<List<OrderByUser>> GetOrdersByUser(int userId)
+        {
+            
+            var httpClient = new HttpClient();
+            httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", Preferences.Get("accessToken", string.Empty));
+            var response = await httpClient.GetStringAsync(AppSettings.APIUrl + "api/Orders/OrdersByUser/" + userId);
+            return JsonConvert.DeserializeObject<List<OrderByUser>>(response);
+        }
+
+        public static async Task<List<Order>> GetOrderDetails(int orderId)
+        {
+            
+            var httpClient = new HttpClient();
+            httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", Preferences.Get("accessToken", string.Empty));
+            var response = await httpClient.GetStringAsync(AppSettings.APIUrl + "api/Orders/OrderDetails/" + orderId);
+            return JsonConvert.DeserializeObject<List<Order>>(response);
+        }
+        #endregion
     }
 }
