@@ -12,6 +12,7 @@ namespace FoodCourt.App.Services
 {
     public static class APIService
     {
+        #region Register
         public static async Task<bool> RegisterUser(string name, string email, string password)
         {
             var register = new Register()
@@ -32,7 +33,9 @@ namespace FoodCourt.App.Services
 
             return true;
         }
+        #endregion
 
+        #region Login
         public static async Task<bool> Login(string email, string password)
         {
             var login = new Login()
@@ -55,7 +58,9 @@ namespace FoodCourt.App.Services
             Preferences.Set("userName", result.user_name);
             return true;
         }
+        #endregion
 
+        #region Product
         public static async Task<List<Category>> GetCategories()
         {
             
@@ -91,5 +96,57 @@ namespace FoodCourt.App.Services
             var response = await httpClient.GetStringAsync(AppSettings.ApiUrl + "api/Products/PopularProducts");
             return JsonConvert.DeserializeObject<List<PopularProduct>>(response);
         }
+        #endregion
+
+        #region ShoppingCart
+        public static async Task<bool> AddItemsInCart(AddToCart addToCart)
+        {
+            
+            var httpClient = new HttpClient();
+            var json = JsonConvert.SerializeObject(addToCart);
+            var content = new StringContent(json, Encoding.UTF8, "application/json");
+            httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", Preferences.Get("accessToken", string.Empty));
+            var response = await httpClient.PostAsync(AppSettings.ApiUrl + "api/ShoppingCartItems", content);
+            if (!response.IsSuccessStatusCode) return false;
+            return true;
+        }
+
+        public static async Task<CartSubTotal> GetCartSubTotal(int userId)
+        {
+           
+            var httpClient = new HttpClient();
+            httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", Preferences.Get("accessToken", string.Empty));
+            var response = await httpClient.GetStringAsync(AppSettings.ApiUrl + "api/ShoppingCartItems/SubTotal/" + userId);
+            return JsonConvert.DeserializeObject<CartSubTotal>(response);
+        }
+
+        public static async Task<List<ShoppingCartItem>> GetShoppingCartItems(int userId)
+        {
+            
+            var httpClient = new HttpClient();
+            httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", Preferences.Get("accessToken", string.Empty));
+            var response = await httpClient.GetStringAsync(AppSettings.ApiUrl + "api/ShoppingCartItems/" + userId);
+            return JsonConvert.DeserializeObject<List<ShoppingCartItem>>(response);
+        }
+
+        public static async Task<TotalCartItem> GetTotalCartItems(int userId)
+        {
+            
+            var httpClient = new HttpClient();
+            httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", Preferences.Get("accessToken", string.Empty));
+            var response = await httpClient.GetStringAsync(AppSettings.ApiUrl + "api/ShoppingCartItems/TotalItems/" + userId);
+            return JsonConvert.DeserializeObject<TotalCartItem>(response);
+        }
+
+        public static async Task<bool> ClearShoppingCart(int userId)
+        {
+            
+            var httpClient = new HttpClient();
+            httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", Preferences.Get("accessToken", string.Empty));
+            var response = await httpClient.DeleteAsync(AppSettings.ApiUrl + "api/ShoppingCartItems/" + userId);
+            if (!response.IsSuccessStatusCode) return false;
+            return true;
+        }
+#endregion
     }
 }
