@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "J7OYF7bh+Gcffh3ZEAouYA8s3Mzdd8n6Sk3kR3MT6HWeQrPoYthZphJucL1kKfIu0V8GjO6BU51+6tBM1F+rDQ==",
+  "dgSpecHash": "C1q7+Tp9ip84HwY1NKc0je/CitXjxJs1hnlhGXrvR3vgai7h+2lkvGe9/RweBf4K8Bsi0sEXh3Js3flrmlup6Q==",
   "success": true,
-  "projectFilePath": "F:\\TTCNPM\\FoodCourt\\Client\\FoodCourt.App\\FoodCourt.App\\FoodCourt.App.csproj",
+  "projectFilePath": "D:\\Xamarin App\\TTCNPM-FoodCourt\\Client\\FoodCourt.App\\FoodCourt.App\\FoodCourt.App.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\Admin\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
-    "C:\\Users\\Admin\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\DINH_DUC\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.3.1\\xamarin.essentials.1.3.1.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\4.5.0.495\\xamarin.forms.4.5.0.495.nupkg.sha512"
   ],
