@@ -1,24 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Xamarin App\\TTCNPM-FoodCourt\\Server\\FoodApi\\FoodApi.csproj": {}
+    "F:\\TTCNPM\\FoodCourt\\Server\\FoodApi\\FoodApi.csproj": {}
   },
   "projects": {
-    "D:\\Xamarin App\\TTCNPM-FoodCourt\\Server\\FoodApi\\FoodApi.csproj": {
+    "F:\\TTCNPM\\FoodCourt\\Server\\FoodApi\\FoodApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Xamarin App\\TTCNPM-FoodCourt\\Server\\FoodApi\\FoodApi.csproj",
+        "projectUniqueName": "F:\\TTCNPM\\FoodCourt\\Server\\FoodApi\\FoodApi.csproj",
         "projectName": "FoodApi",
-        "projectPath": "D:\\Xamarin App\\TTCNPM-FoodCourt\\Server\\FoodApi\\FoodApi.csproj",
-        "packagesPath": "C:\\Users\\DINH_DUC\\.nuget\\packages\\",
-        "outputPath": "D:\\Xamarin App\\TTCNPM-FoodCourt\\Server\\FoodApi\\obj\\",
+        "projectPath": "F:\\TTCNPM\\FoodCourt\\Server\\FoodApi\\FoodApi.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "F:\\TTCNPM\\FoodCourt\\Server\\FoodApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\DINH_DUC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],

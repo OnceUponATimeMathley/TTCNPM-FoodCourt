@@ -670,25 +670,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\DINH_DUC\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Admin\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Xamarin App\\TTCNPM-FoodCourt\\Client\\FoodCourt.App\\FoodCourt.App\\FoodCourt.App.csproj",
+      "projectUniqueName": "F:\\TTCNPM\\FoodCourt\\Client\\FoodCourt.App\\FoodCourt.App\\FoodCourt.App.csproj",
       "projectName": "FoodCourt.App",
-      "projectPath": "D:\\Xamarin App\\TTCNPM-FoodCourt\\Client\\FoodCourt.App\\FoodCourt.App\\FoodCourt.App.csproj",
-      "packagesPath": "C:\\Users\\DINH_DUC\\.nuget\\packages\\",
-      "outputPath": "D:\\Xamarin App\\TTCNPM-FoodCourt\\Client\\FoodCourt.App\\FoodCourt.App\\obj\\",
+      "projectPath": "F:\\TTCNPM\\FoodCourt\\Client\\FoodCourt.App\\FoodCourt.App\\FoodCourt.App.csproj",
+      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+      "outputPath": "F:\\TTCNPM\\FoodCourt\\Client\\FoodCourt.App\\FoodCourt.App\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\DINH_DUC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -745,5 +743,13 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file F:\\TTCNPM\\FoodCourt\\Client\\FoodCourt.App\\FoodCourt.App\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

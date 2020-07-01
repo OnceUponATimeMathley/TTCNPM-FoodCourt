@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 using FoodCourt.App.Models;
@@ -55,5 +56,40 @@ namespace FoodCourt.App.Services
             return true;
         }
 
+        public static async Task<List<Category>> GetCategories()
+        {
+            
+            var httpClient = new HttpClient();
+            httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", Preferences.Get("accessToken", string.Empty));
+            var response = await httpClient.GetStringAsync(AppSettings.APIUrl + "/api/Categories");
+            return JsonConvert.DeserializeObject<List<Category>>(response);
+        }
+
+        public static async Task<Product> GetProductById(int productId)
+        {
+            
+            var httpClient = new HttpClient();
+            httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", Preferences.Get("accessToken", string.Empty));
+            var response = await httpClient.GetStringAsync(AppSettings.ApiUrl + "api/Products/" + productId);
+            return JsonConvert.DeserializeObject<Product>(response);
+        }
+
+        public static async Task<List<ProductByCategory>> GetProductByCategory(int categoryId)
+        {
+            
+            var httpClient = new HttpClient();
+            httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", Preferences.Get("accessToken", string.Empty));
+            var response = await httpClient.GetStringAsync(AppSettings.ApiUrl + "api/Products/ProductsByCategory/" + categoryId);
+            return JsonConvert.DeserializeObject<List<ProductByCategory>>(response);
+        }
+
+        public static async Task<List<PopularProduct>> GetPopularProducts()
+        {
+           
+            var httpClient = new HttpClient();
+            httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", Preferences.Get("accessToken", string.Empty));
+            var response = await httpClient.GetStringAsync(AppSettings.ApiUrl + "api/Products/PopularProducts");
+            return JsonConvert.DeserializeObject<List<PopularProduct>>(response);
+        }
     }
 }
