@@ -68,6 +68,7 @@ namespace FoodApi
             app.UseAuthentication();
             app.UseAuthorization();
             foodDbContext.Database.EnsureCreated();
+            //app.UseMvcWithDefaultRoute();
 
             app.UseEndpoints(endpoints =>
             {
