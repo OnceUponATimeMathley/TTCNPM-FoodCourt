@@ -26,7 +26,7 @@ namespace FoodCourt.App.Services
             var json = JsonConvert.SerializeObject(register);
             var content = new StringContent(json,Encoding.UTF8,"application/json");
 
-            var response = await httpClient.PostAsync(AppSettings.APIUrl+ "/api/Accounts/Register", content);
+            var response = await httpClient.PostAsync(AppSettings.APIUrl+ "api/Accounts/Register", content);
 
             if (!response.IsSuccessStatusCode)
                 return false;
@@ -47,7 +47,7 @@ namespace FoodCourt.App.Services
             var json = JsonConvert.SerializeObject(login);
             var content = new StringContent(json, Encoding.UTF8, "application/json");
 
-            var response = await httpClient.PostAsync(AppSettings.APIUrl + "/api/Accounts/Login", content);
+            var response = await httpClient.PostAsync(AppSettings.APIUrl + "api/Accounts/Login", content);
             if (!response.IsSuccessStatusCode)
                 return false;
 
@@ -66,7 +66,7 @@ namespace FoodCourt.App.Services
             
             var httpClient = new HttpClient();
             httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", Preferences.Get("accessToken", string.Empty));
-            var response = await httpClient.GetStringAsync(AppSettings.APIUrl + "/api/Categories");
+            var response = await httpClient.GetStringAsync(AppSettings.APIUrl + "api/Categories");
             return JsonConvert.DeserializeObject<List<Category>>(response);
         }
 

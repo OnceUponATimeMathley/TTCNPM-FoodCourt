@@ -1,4 +1,5 @@
 ﻿using System;
+using FoodCourt.App.Pages;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -10,7 +11,7 @@ namespace FoodCourt.App
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new SignupPage();
         }
 
         protected override void OnStart()

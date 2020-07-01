@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using FoodCourt.App;
 
 namespace FoodCourt.Models
 {
@@ -12,6 +13,6 @@ namespace FoodCourt.Models
         public string detail { get; set; }
         public int categoryId { get; set; }
         public string imageUrl { get; set; }
-        public string FullImageUrl => AppSettings.ApiUrl + imageUrl;
+        public string FullImageUrl => AppSettings.APIUrl + imageUrl;
     }
 }

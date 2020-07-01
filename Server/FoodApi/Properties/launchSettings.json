@@ -11,7 +11,7 @@
   "profiles": {
     "IIS Express": {
       "commandName": "IISExpress",
-      "commandLineArgs": "--urls http://10.0.158.91:45455/weatherforecast",
+      "commandLineArgs": "--urls http://*:45455/",
       "launchBrowser": true,
       "launchUrl": "weatherforecast",
       "environmentVariables": {
