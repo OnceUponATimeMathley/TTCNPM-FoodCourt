@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "WO0Gy0COhfFlxWtP8g7joOxQ9aGOk2k9xBu/QWd393WMsl1np7MPtZrYKfda6so6OtshaxyS075LIhDvekQzsg==",
+  "dgSpecHash": "zgV+XAlqXhJwYKtn+jXxa44FZX68bflNFCdxHo6IrCvosMIW+82QLxhPyYYp8fP0Blhvxl/axKjJF3sD/xxVYw==",
   "success": true,
   "projectFilePath": "F:\\TTCNPM\\FoodCourt\\Server\\FoodApi\\FoodApi.csproj",
   "expectedPackageFiles": [
@@ -38,7 +38,7 @@
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.netcore.platforms\\2.0.0\\microsoft.netcore.platforms.2.0.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.win32.registry\\4.5.0\\microsoft.win32.registry.4.5.0.nupkg.sha512",
-    "C:\\Users\\Admin\\.nuget\\packages\\newtonsoft.json\\12.0.2\\newtonsoft.json.12.0.2.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\newtonsoft.json.bson.1.0.2.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\runtime.native.system\\4.3.0\\runtime.native.system.4.3.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
