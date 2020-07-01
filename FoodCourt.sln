@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30204.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Server", "Server", "{0102CAF2-C0EA-4A6C-ADDE-ED738A0444EF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client", "Client", "{1CABA840-FE76-48D8-A18A-9F518AEE5F29}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FoodApi", "Server\FoodApi\FoodApi.csproj", "{8CEABFE2-B0E8-4C8A-A15E-BD008DA05360}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8CEABFE2-B0E8-4C8A-A15E-BD008DA05360}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CEABFE2-B0E8-4C8A-A15E-BD008DA05360}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CEABFE2-B0E8-4C8A-A15E-BD008DA05360}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CEABFE2-B0E8-4C8A-A15E-BD008DA05360}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8CEABFE2-B0E8-4C8A-A15E-BD008DA05360} = {0102CAF2-C0EA-4A6C-ADDE-ED738A0444EF}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F96E7500-2489-44DD-9EF3-C1CB29630C72}
+	EndGlobalSection
+EndGlobal
