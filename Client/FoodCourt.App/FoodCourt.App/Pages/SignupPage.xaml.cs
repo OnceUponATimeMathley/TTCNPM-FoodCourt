@@ -29,13 +29,18 @@ namespace FoodCourt.App.Pages
                 if (response)
                 {
                     await DisplayAlert("Hi", "Your account has been created", "Alright");
-                    
+                    await Navigation.PushModalAsync(new LoginPage());
                 }
                 else
                 {
                     await DisplayAlert("Oops", "Something went wrong", "Cancel");
                 }
             }
+        }
+
+        private async void BtnLogin_OnClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new LoginPage());
         }
     }
 }
