@@ -58,5 +58,12 @@ namespace FoodCourt.App.Pages
             await SlMenu.TranslateTo(-250, 0, 400, Easing.Linear);
             GridOverlay.IsVisible = false;
         }
+
+        protected override async void OnAppearing()
+        {
+            base.OnAppearing();
+            var response = await APIService.GetTotalCartItems(Preferences.Get("userId", 0));
+            LblTotalItems.Text = response.totalItems.ToString();
+        }
     }
 }
