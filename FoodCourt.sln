@@ -8,12 +8,15 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client", "Client", "{1CABA840-FE76-48D8-A18A-9F518AEE5F29}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FoodApi", "Server\FoodApi\FoodApi.csproj", "{8CEABFE2-B0E8-4C8A-A15E-BD008DA05360}"
+	ProjectSection(ProjectDependencies) = postProject
+		{228497F4-A06A-476E-A4AD-5BC816178A8E} = {228497F4-A06A-476E-A4AD-5BC816178A8E}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoodCourt.App.Android", "Client\FoodCourt.App\FoodCourt.App.Android\FoodCourt.App.Android.csproj", "{228497F4-A06A-476E-A4AD-5BC816178A8E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoodCourt.App.iOS", "Client\FoodCourt.App\FoodCourt.App.iOS\FoodCourt.App.iOS.csproj", "{D73CDC51-0FF9-4558-8993-20F8AE84DA20}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoodCourt.App", "Client\FoodCourt.App\FoodCourt.App\FoodCourt.App.csproj", "{C25DBFAE-41F3-4C8D-8715-6A5E27703158}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FoodCourt.App", "Client\FoodCourt.App\FoodCourt.App\FoodCourt.App.csproj", "{C25DBFAE-41F3-4C8D-8715-6A5E27703158}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
