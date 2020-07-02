@@ -65,5 +65,18 @@ namespace FoodCourt.App.Pages
             var response = await APIService.GetTotalCartItems(Preferences.Get("userId", 0));
             LblTotalItems.Text = response.totalItems.ToString();
         }
+
+        private void CvProducts_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void CvCategories_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var currentSelection = e.CurrentSelection.FirstOrDefault() as Category;
+            if (currentSelection == null) return;
+            Navigation.PushModalAsync(new ProductListPage(currentSelection.id, currentSelection.name));
+            ((CollectionView)sender).SelectedItem = null;
+        }
     }
 }

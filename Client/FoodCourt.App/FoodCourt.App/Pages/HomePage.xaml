@@ -10,7 +10,7 @@
         <Grid>
             <CollectionView x:Name="CvProducts"
                             SelectionMode="Single"
-                            SelectionChanged="CvProducts_SelectionChanged">
+                            SelectionChanged="CvProducts_OnSelectionChanged">
                 <CollectionView.ItemsLayout>
                     <GridItemsLayout Orientation="Vertical"
                                      Span="2" />
@@ -24,7 +24,7 @@
                         <CollectionView  x:Name="CvCategories"
                                          HeightRequest="130"
                                          SelectionMode="Single"
-                                         SelectionChanged="CvCategories_SelectionChanged">
+                                         SelectionChanged="CvCategories_OnSelectionChanged">
                             <CollectionView.ItemsLayout>
                                 <LinearItemsLayout Orientation="Horizontal" />
                             </CollectionView.ItemsLayout>
@@ -111,7 +111,7 @@
                            Source="menu.png"
                            HeightRequest="30">
                         <Image.GestureRecognizers>
-                            <TapGestureRecognizer x:Name="ImgMenu" Tapped="ImgMenu_Tapped" />
+                            <TapGestureRecognizer x:Name="ImgMenu"  />
                         </Image.GestureRecognizers>
                     </Image>
                     <Grid HorizontalOptions="EndAndExpand"
@@ -148,7 +148,7 @@
                                    TextColor="White" />
                         </Frame>
                         <Grid.GestureRecognizers>
-                            <TapGestureRecognizer x:Name="TapCartIcon" Tapped="TapCartIcon_Tapped" />
+                            <TapGestureRecognizer x:Name="TapCartIcon"/>
                         </Grid.GestureRecognizers>
                     </Grid>
                 </StackLayout>
@@ -203,7 +203,7 @@
                                VerticalTextAlignment="Center"
                                FontSize="20" />
                         <StackLayout.GestureRecognizers>
-                            <TapGestureRecognizer x:Name="TapOrders" Tapped="TapOrders_Tapped" />
+                            <TapGestureRecognizer x:Name="TapOrders"/>
                         </StackLayout.GestureRecognizers>
                     </StackLayout>
                     <StackLayout Spacing="30"
@@ -218,7 +218,7 @@
                                VerticalTextAlignment="Center"
                                FontSize="20" />
                         <StackLayout.GestureRecognizers>
-                            <TapGestureRecognizer x:Name="TapCart" Tapped="TapCart_Tapped"/>
+                            <TapGestureRecognizer x:Name="TapCart"/>
                         </StackLayout.GestureRecognizers>
                     </StackLayout>
                     <StackLayout Spacing="30"
@@ -233,7 +233,7 @@
                                VerticalTextAlignment="Center"
                                FontSize="20" />
                         <StackLayout.GestureRecognizers>
-                            <TapGestureRecognizer x:Name="TapContact" Tapped="TapContact_Tapped"/>
+                            <TapGestureRecognizer x:Name="TapContact"/>
                         </StackLayout.GestureRecognizers>
                     </StackLayout>
                     <StackLayout Spacing="30"
@@ -248,14 +248,14 @@
                                VerticalTextAlignment="Center"
                                FontSize="20" />
                         <StackLayout.GestureRecognizers>
-                            <TapGestureRecognizer x:Name="TapLogout" Tapped="TapLogout_Tapped"/>
+                            <TapGestureRecognizer x:Name="TapLogout"/>
                         </StackLayout.GestureRecognizers>
                     </StackLayout>
                 </StackLayout>
                 <BoxView Grid.Column="1"
                          x:Name="BoxViewLayer">
                     <BoxView.GestureRecognizers>
-                        <TapGestureRecognizer x:Name="TapCloseMenu" Tapped="TapCloseMenu_Tapped" />
+                        <TapGestureRecognizer x:Name="TapCloseMenu"/>
                     </BoxView.GestureRecognizers>
                 </BoxView>
             </Grid>
