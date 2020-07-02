@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using FoodCourt.App.Models;
 using FoodCourt.App.Services;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -23,6 +24,7 @@ namespace FoodCourt.App.Pages
             CategoriesCollection = new ObservableCollection<Category>();
             GetPopularProducts();
             GetCategories();
+            LblUserName.Text = Preferences.Get("userName", string.Empty);
         }
 
         private async void GetCategories()
