@@ -11,7 +11,7 @@
   "profiles": {
     "IIS Express": {
       "commandName": "IISExpress",
-      "commandLineArgs": "--urls http://*:45455/",
+      "commandLineArgs": "--urls http://*:49887/",
       "launchBrowser": true,
       "launchUrl": "weatherforecast",
       "environmentVariables": {
@@ -20,13 +20,13 @@
     },
     "FoodApi": {
       "commandName": "Project",
-      "commandLineArgs": "--urls http://*:49887",
+      "commandLineArgs": "--urls http://*:49887/",
       "launchBrowser": true,
       "launchUrl": "weatherforecast",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
-      "applicationUrl": "https://localhost:49887"
+      "applicationUrl": "http://localhost:49887"
     }
   }
 }

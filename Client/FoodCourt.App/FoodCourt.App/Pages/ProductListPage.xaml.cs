@@ -38,5 +38,9 @@ namespace FoodCourt.App.Pages
             Navigation.PopModalAsync();
         }
 
+        private void TapBack_OnTapped(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "gmu25kEarB0AdFvZRvc7z2680Kavb9pATgv6tRNtR+yb5oQlXRzvk+z7nZ++Uw68SKwxoSHlkLZ/LrdR1W4+9A==",
+  "dgSpecHash": "1s7FsI7KyFSaOwS9vSxrHR4HyaZws8Ai/Vauj+6PLtaFUawrf8uQ7zybNdeeNEYFulyuXzx6Qz2n20ugFdQKUw==",
   "success": true,
   "projectFilePath": "F:\\TTCNPM\\FoodCourt\\Client\\FoodCourt.App\\FoodCourt.App.Android\\FoodCourt.App.Android.csproj",
   "expectedPackageFiles": [
@@ -43,7 +43,7 @@
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.android.support.versionedparcelable\\28.0.0.3\\xamarin.android.support.versionedparcelable.28.0.0.3.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.android.support.viewpager\\28.0.0.3\\xamarin.android.support.viewpager.28.0.0.3.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\xamarin.essentials\\1.5.3.2\\xamarin.essentials.1.5.3.2.nupkg.sha512",
-    "C:\\Users\\Admin\\.nuget\\packages\\xamarin.forms\\4.7.0.968\\xamarin.forms.4.7.0.968.nupkg.sha512"
+    "C:\\Users\\Admin\\.nuget\\packages\\xamarin.forms\\4.7.0.1080\\xamarin.forms.4.7.0.1080.nupkg.sha512"
   ],
   "logs": []
 }

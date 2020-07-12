@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ZGwIj2NPSZ/WEamezz9f9LYhG8gDRgIIR03J7pBifn/O/hcoWJvl51zLuB8cq3niLf61qyXFRDS1rOEuJ3/13A==",
+  "dgSpecHash": "xRkPk9xh8vdqSaQL1igFLRtQwtw1gsUoBj8+w9B8F/6zCXfJWAklmFh93OSWuL0HnZ0+LhkEV2qvuJ0sd2VcNw==",
   "success": true,
   "projectFilePath": "F:\\TTCNPM\\FoodCourt\\Client\\FoodCourt.App\\FoodCourt.App\\FoodCourt.App.csproj",
   "expectedPackageFiles": [
@@ -9,7 +9,7 @@
     "C:\\Users\\Admin\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\xamarin.essentials\\1.5.3.2\\xamarin.essentials.1.5.3.2.nupkg.sha512",
-    "C:\\Users\\Admin\\.nuget\\packages\\xamarin.forms\\4.7.0.968\\xamarin.forms.4.7.0.968.nupkg.sha512"
+    "C:\\Users\\Admin\\.nuget\\packages\\xamarin.forms\\4.7.0.1080\\xamarin.forms.4.7.0.1080.nupkg.sha512"
   ],
   "logs": []
 }
