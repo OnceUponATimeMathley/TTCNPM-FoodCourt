@@ -28,7 +28,8 @@
                        HorizontalTextAlignment="Center" />
             </Grid>
             <CollectionView x:Name="CvProducts"
-                            SelectionMode="Single">
+                            SelectionMode="Single"
+                            SelectionChanged="CvProducts_OnSelectionChanged">
                 <CollectionView.ItemsLayout>
                     <GridItemsLayout Orientation="Vertical"
                                      Span="2" />
@@ -44,8 +45,8 @@
                                    HeightRequest="150"
                                    WidthRequest="150" 
                                    Source="{Binding FullImageUrl}"/>
-                            <Label TextColor="#000000"
-                                                                                                        Text="{Binding name}"/>
+                            <Label TextColor="#000000" 
+                                   Text="{Binding name}"/>
                             <Label TextColor="#B00905"
                                    Text="{Binding price ,StringFormat='${0}'}"/>
                         </StackLayout>

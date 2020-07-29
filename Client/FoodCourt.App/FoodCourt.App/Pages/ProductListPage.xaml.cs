@@ -33,10 +33,17 @@ namespace FoodCourt.App.Pages
             CvProducts.ItemsSource = ProductByCategoryCollection;
         }
 
-        private void TapBack_Tapped(object sender, EventArgs e)
+        private void TapBack_OnTapped(object sender, EventArgs e)
         {
             Navigation.PopModalAsync();
         }
 
+        private void CvProducts_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var currectSelection = e.CurrentSelection.FirstOrDefault() as ProductByCategory;
+            if (currectSelection == null) return;
+            Navigation.PushModalAsync(new ProductDetailPage(currectSelection.id));
+            ((CollectionView)sender).SelectedItem = null;
+        }
     }
 }
