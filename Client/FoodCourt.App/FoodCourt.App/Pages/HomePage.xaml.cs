@@ -68,7 +68,10 @@ namespace FoodCourt.App.Pages
 
         private void CvProducts_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            throw new NotImplementedException();
+            var currectSelection = e.CurrentSelection.FirstOrDefault() as PopularProduct;
+            if (currectSelection == null) return;
+            Navigation.PushModalAsync(new ProductDetailPage(currectSelection.id));
+            ((CollectionView)sender).SelectedItem = null;
         }
 
         private void CvCategories_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
