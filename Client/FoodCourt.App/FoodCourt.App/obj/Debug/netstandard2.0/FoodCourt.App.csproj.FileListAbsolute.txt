@@ -11,8 +11,6 @@ F:\TTCNPM\FoodCourt\Client\FoodCourt.App\FoodCourt.App\obj\Debug\netstandard2.0\
 F:\TTCNPM\FoodCourt\Client\FoodCourt.App\FoodCourt.App\obj\Debug\netstandard2.0\Pages\SignupPage.xaml.g.cs
 F:\TTCNPM\FoodCourt\Client\FoodCourt.App\FoodCourt.App\obj\Debug\netstandard2.0\FoodCourt.App.AssemblyInfoInputs.cache
 F:\TTCNPM\FoodCourt\Client\FoodCourt.App\FoodCourt.App\obj\Debug\netstandard2.0\FoodCourt.App.AssemblyInfo.cs
-F:\TTCNPM\FoodCourt\Client\FoodCourt.App\FoodCourt.App\obj\Debug\netstandard2.0\FoodCourt.App.csproj.CoreCompileInputs.cache
-F:\TTCNPM\FoodCourt\Client\FoodCourt.App\FoodCourt.App\obj\Debug\netstandard2.0\XamlC.stamp
 F:\TTCNPM\FoodCourt\Client\FoodCourt.App\FoodCourt.App\obj\Debug\netstandard2.0\FoodCourt.App.dll
 F:\TTCNPM\FoodCourt\Client\FoodCourt.App\FoodCourt.App\obj\Debug\netstandard2.0\ref\FoodCourt.App.dll
 F:\TTCNPM\FoodCourt\Client\FoodCourt.App\FoodCourt.App\obj\Debug\netstandard2.0\FoodCourt.App.pdb
@@ -21,3 +19,4 @@ F:\TTCNPM\FoodCourt\Client\FoodCourt.App\FoodCourt.App\obj\Debug\netstandard2.0\
 F:\TTCNPM\FoodCourt\Client\FoodCourt.App\FoodCourt.App\obj\Debug\netstandard2.0\Pages\OrdersPage.xaml.g.cs
 F:\TTCNPM\FoodCourt\Client\FoodCourt.App\FoodCourt.App\obj\Debug\netstandard2.0\FoodCourt.App.csprojAssemblyReference.cache
 F:\TTCNPM\FoodCourt\Client\FoodCourt.App\FoodCourt.App\obj\Debug\netstandard2.0\Pages\OrderDetailPage.xaml.g.cs
+F:\TTCNPM\FoodCourt\Client\FoodCourt.App\FoodCourt.App\obj\Debug\netstandard2.0\Pages\ContactPage.xaml.g.cs

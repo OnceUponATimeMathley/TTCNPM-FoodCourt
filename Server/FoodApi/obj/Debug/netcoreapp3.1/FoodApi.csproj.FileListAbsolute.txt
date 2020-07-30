@@ -52,8 +52,6 @@ F:\TTCNPM\FoodCourt\Server\FoodApi\bin\Debug\netcoreapp3.1\runtimes\win\lib\netc
 F:\TTCNPM\FoodCourt\Server\FoodApi\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 F:\TTCNPM\FoodCourt\Server\FoodApi\obj\Debug\netcoreapp3.1\FoodApi.AssemblyInfoInputs.cache
 F:\TTCNPM\FoodCourt\Server\FoodApi\obj\Debug\netcoreapp3.1\FoodApi.AssemblyInfo.cs
-F:\TTCNPM\FoodCourt\Server\FoodApi\obj\Debug\netcoreapp3.1\FoodApi.csproj.CoreCompileInputs.cache
-F:\TTCNPM\FoodCourt\Server\FoodApi\obj\Debug\netcoreapp3.1\FoodApi.MvcApplicationPartsAssemblyInfo.cache
 F:\TTCNPM\FoodCourt\Server\FoodApi\obj\Debug\netcoreapp3.1\FoodApi.RazorTargetAssemblyInfo.cache
 F:\TTCNPM\FoodCourt\Server\FoodApi\obj\Debug\netcoreapp3.1\FoodApi.csproj.CopyComplete
 F:\TTCNPM\FoodCourt\Server\FoodApi\obj\Debug\netcoreapp3.1\staticwebassets\FoodApi.StaticWebAssets.Manifest.cache

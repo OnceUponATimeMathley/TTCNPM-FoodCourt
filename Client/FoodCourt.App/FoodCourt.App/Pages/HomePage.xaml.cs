@@ -113,5 +113,12 @@ namespace FoodCourt.App.Pages
         {
             Navigation.PushModalAsync(new CartPage());
         }
+
+        private void TapLogout_OnTapped(object sender, EventArgs e)
+        {
+            Preferences.Set("accessToken", string.Empty);
+            Preferences.Set("tokenExpirationTime", 0);
+            Application.Current.MainPage = new NavigationPage(new SignupPage());
+        }
     }
 }

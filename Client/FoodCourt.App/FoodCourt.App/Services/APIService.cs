@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using FoodCourt.App.Models;
 using Newtonsoft.Json;
+using UnixTimeStamp;
 using Xamarin.Essentials;
 
 namespace FoodCourt.App.Services
@@ -56,6 +57,8 @@ namespace FoodCourt.App.Services
             Preferences.Set("accessToken", result.access_token);
             Preferences.Set("userId", result.user_Id);
             Preferences.Set("userName", result.user_name);
+            Preferences.Set("tokenExpirationTime", result.expiration_Time);
+            Preferences.Set("currentTime", UnixTime.GetCurrentTime());
             return true;
         }
         #endregion
@@ -63,7 +66,7 @@ namespace FoodCourt.App.Services
         #region Product
         public static async Task<List<Category>> GetCategories()
         {
-            
+            await TokenValidator.CheckTokenValidity();
             var httpClient = new HttpClient();
             httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", Preferences.Get("accessToken", string.Empty));
             var response = await httpClient.GetStringAsync(AppSettings.APIUrl + "api/Categories");
@@ -72,7 +75,7 @@ namespace FoodCourt.App.Services
 
         public static async Task<Product> GetProductById(int productId)
         {
-            
+            await TokenValidator.CheckTokenValidity();
             var httpClient = new HttpClient();
             httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", Preferences.Get("accessToken", string.Empty));
             var response = await httpClient.GetStringAsync(AppSettings.APIUrl + "api/Products/" + productId);
@@ -81,7 +84,7 @@ namespace FoodCourt.App.Services
 
         public static async Task<List<ProductByCategory>> GetProductByCategory(int categoryId)
         {
-            
+            await TokenValidator.CheckTokenValidity();
             var httpClient = new HttpClient();
             httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", Preferences.Get("accessToken", string.Empty));
             var response = await httpClient.GetStringAsync(AppSettings.APIUrl + "api/Products/ProductsByCategory/" + categoryId);
@@ -90,7 +93,7 @@ namespace FoodCourt.App.Services
 
         public static async Task<List<PopularProduct>> GetPopularProducts()
         {
-           
+            await TokenValidator.CheckTokenValidity();
             var httpClient = new HttpClient();
             httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", Preferences.Get("accessToken", string.Empty));
             var response = await httpClient.GetStringAsync(AppSettings.APIUrl + "api/Products/PopularProducts");
@@ -164,7 +167,7 @@ namespace FoodCourt.App.Services
 
         public static async Task<List<OrderByUser>> GetOrdersByUser(int userId)
         {
-            
+            await TokenValidator.CheckTokenValidity();
             var httpClient = new HttpClient();
             httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", Preferences.Get("accessToken", string.Empty));
             var response = await httpClient.GetStringAsync(AppSettings.APIUrl + "api/Orders/OrdersByUser/" + userId);
@@ -173,12 +176,28 @@ namespace FoodCourt.App.Services
 
         public static async Task<List<Order>> GetOrderDetails(int orderId)
         {
-            
+            await TokenValidator.CheckTokenValidity();
             var httpClient = new HttpClient();
             httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", Preferences.Get("accessToken", string.Empty));
             var response = await httpClient.GetStringAsync(AppSettings.APIUrl + "api/Orders/OrderDetails/" + orderId);
             return JsonConvert.DeserializeObject<List<Order>>(response);
         }
         #endregion
+
+        public static class TokenValidator
+        {
+            public static async Task CheckTokenValidity()
+            {
+                var expirationTime = Preferences.Get("tokenExpirationTime", 0);
+                Preferences.Set("currentTime", UnixTime.GetCurrentTime());
+                var currentTime = Preferences.Get("currentTime", 0);
+                if (expirationTime < currentTime)
+                {
+                    var email = Preferences.Get("email", string.Empty);
+                    var password = Preferences.Get("password", string.Empty);
+                    await APIService.Login(email, password);
+                }
+            }
+        }
     }
 }
