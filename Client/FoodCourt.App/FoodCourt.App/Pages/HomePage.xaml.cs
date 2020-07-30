@@ -103,5 +103,15 @@ namespace FoodCourt.App.Pages
         {
             CloseAppMenu();
         }
+
+        private void TapContact_OnTapped(object sender, EventArgs e)
+        {
+            Navigation.PushModalAsync(new ContactPage());
+        }
+
+        private void TapCart_OnTapped(object sender, EventArgs e)
+        {
+            Navigation.PushModalAsync(new CartPage());
+        }
     }
 }
