@@ -47,17 +47,18 @@ namespace FoodCourt.App.Pages
             CvProducts.ItemsSource = ProductsCollection;
         }
 
-        private async void ImgMenu_OnTapped(object sender, EventArgs e)
+        protected override void OnDisappearing()
         {
-            GridOverlay.IsVisible = true;
-            await SlMenu.TranslateTo(0, 0, 400, Easing.Linear);
+            base.OnDisappearing();
+            CloseAppMenu();
         }
 
-        private async void TapCloseMenu_OnTapped(object sender, EventArgs e)
+        private async void CloseAppMenu()
         {
             await SlMenu.TranslateTo(-250, 0, 400, Easing.Linear);
             GridOverlay.IsVisible = false;
         }
+
 
         protected override async void OnAppearing()
         {
@@ -85,6 +86,22 @@ namespace FoodCourt.App.Pages
         private void TapCartIcon_OnTapped(object sender, EventArgs e)
         {
             Navigation.PushModalAsync(new CartPage());
+        }
+
+        private void TapOrders_OnTapped(object sender, EventArgs e)
+        {
+            Navigation.PushModalAsync(new OrdersPage());
+        }
+
+        private async void ImgMenu_OnTapped(object sender, EventArgs e)
+        {
+            GridOverlay.IsVisible = true;
+            await SlMenu.TranslateTo(0, 0, 400, Easing.Linear);
+        }
+
+        private void TapCloseMenu_OnTapped(object sender, EventArgs e)
+        {
+            CloseAppMenu();
         }
     }
 }

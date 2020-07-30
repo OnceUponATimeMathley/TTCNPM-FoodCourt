@@ -111,7 +111,7 @@
                            Source="menu.png"
                            HeightRequest="30">
                         <Image.GestureRecognizers>
-                            <TapGestureRecognizer x:Name="ImgMenu"  />
+                            <TapGestureRecognizer x:Name="ImgMenu" Tapped="ImgMenu_OnTapped" />
                         </Image.GestureRecognizers>
                     </Image>
                     <Grid HorizontalOptions="EndAndExpand"
@@ -203,7 +203,7 @@
                                VerticalTextAlignment="Center"
                                FontSize="20" />
                         <StackLayout.GestureRecognizers>
-                            <TapGestureRecognizer x:Name="TapOrders"/>
+                            <TapGestureRecognizer x:Name="TapOrders" Tapped="TapOrders_OnTapped"/>
                         </StackLayout.GestureRecognizers>
                     </StackLayout>
                     <StackLayout Spacing="30"
@@ -255,7 +255,7 @@
                 <BoxView Grid.Column="1"
                          x:Name="BoxViewLayer">
                     <BoxView.GestureRecognizers>
-                        <TapGestureRecognizer x:Name="TapCloseMenu"/>
+                        <TapGestureRecognizer x:Name="TapCloseMenu" Tapped="TapCloseMenu_OnTapped"/>
                     </BoxView.GestureRecognizers>
                 </BoxView>
             </Grid>
