@@ -81,5 +81,10 @@ namespace FoodCourt.App.Pages
             Navigation.PushModalAsync(new ProductListPage(currentSelection.id, currentSelection.name));
             ((CollectionView)sender).SelectedItem = null;
         }
+
+        private void TapCartIcon_OnTapped(object sender, EventArgs e)
+        {
+            Navigation.PushModalAsync(new CartPage());
+        }
     }
 }
